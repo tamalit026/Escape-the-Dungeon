@@ -16,6 +16,6 @@ public class Player : MonoBehaviour
         input.x = Input.GetAxis("Horizontal");
         input.z = Input.GetAxis("Vertical");
 
-        transform.position += input * Time.deltaTime * speed;
+        transform.position += input.normalized * Time.deltaTime * speed;
     }
 }
